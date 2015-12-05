@@ -21,7 +21,7 @@ def find_version(*parts):
 
 
 setup(
-    name = 'django_polymorphic',
+    name = 'django-polymorphic-ng',
     version = find_version('polymorphic', '__version__.py'),
     license = 'BSD',
 
