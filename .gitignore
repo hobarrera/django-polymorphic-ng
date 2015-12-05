@@ -4,6 +4,7 @@
 *.db
 *.egg-info/
 *.egg/
+*.eggs/
 .coverage
 .project
 .idea/
