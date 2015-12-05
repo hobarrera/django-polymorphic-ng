@@ -22,7 +22,6 @@ def find_version(*parts):
 
 setup(
     name = 'django-polymorphic-ng',
-    version = find_version('polymorphic', '__version__.py'),
     license = 'BSD',
 
     description = 'Seamless Polymorphic Inheritance for Django Models',
@@ -42,7 +41,6 @@ setup(
         ],
     },
 
-    install_requires=['setuptools'],
     test_suite='runtests',
 
     classifiers=[
@@ -62,5 +60,7 @@ setup(
         'Framework :: Django :: 1.7',
         'Framework :: Django :: 1.8',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ]
+    ],
+    use_scm_version={'version_scheme': 'post-release'},
+    setup_requires=['setuptools_scm'],
 )
