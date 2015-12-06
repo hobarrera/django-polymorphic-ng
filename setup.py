@@ -2,9 +2,6 @@
 from setuptools import setup, find_packages
 from os import path
 import codecs
-import os
-import re
-import sys
 
 
 def read(*parts):
@@ -12,30 +9,22 @@ def read(*parts):
     return codecs.open(file_path, encoding='utf-8').read()
 
 
-def find_version(*parts):
-    version_file = read(*parts)
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", version_file, re.M)
-    if version_match:
-        return str(version_match.group(1))
-    raise RuntimeError("Unable to find version string.")
-
-
 setup(
-    name = 'django-polymorphic-ng',
-    license = 'BSD',
+    name='django-polymorphic-ng',
+    license='BSD',
 
-    description = 'Seamless Polymorphic Inheritance for Django Models',
-    long_description = read('README.rst'),
-    url = 'https://github.com/chrisglass/django_polymorphic',
+    description='Seamless Polymorphic Inheritance for Django Models',
+    long_description=read('README.rst'),
+    url='https://github.com/chrisglass/django_polymorphic',
 
-    author = 'Bert Constantin',
-    author_email = 'bert.constantin@gmx.de',
+    author='Bert Constantin',
+    author_email='bert.constantin@gmx.de',
 
-    maintainer = 'Christopher Glass',
-    maintainer_email = 'tribaal@gmail.com',
+    maintainer='Christopher Glass',
+    maintainer_email='tribaal@gmail.com',
 
-    packages = find_packages(),
-    package_data = {
+    packages=find_packages(),
+    package_data={
         'polymorphic': [
             'templates/admin/polymorphic/*.html',
         ],
